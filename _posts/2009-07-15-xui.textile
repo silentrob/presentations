@@ -4,68 +4,78 @@ title: XUI
 permalink: /xui/index.html
 ---
 
-<div class="slide">
+<div class="slide bg-orange">
 h1. XUI Overview
 
-- Full Featured
-- 2K
-- Chain-able
-- jQuery like
+* Full Featured
+* 2K
+* Chain-able
+* jQuery like
 
 </div>
 
 <div class="slide bg-green">
 h1. Basic Selector
 
-- css3 using querySelectorAll
+* css3 using querySelectorAll
+
 </div>
 
 <div class="slide bg-pink">
-h1. Hello Europe  
+h1. Other Selectors  
+
+* element
+* window
+* array
+* comma list
+
+</div>
+
+<div class="slide bg-white">
+h1. Extend Select Extend 
+
+* has
+* not
 </div>
 
 
-- XUI Overview
-  - Full Featured
-  - 2K
-  - Chain-able
-  - jQuery like
-  
-- Basic Selector
-  - css3 using querySelectorAll
-  
-- Other Selectors
-  - element
-  - window
-  - array
-  - comma list
-  
-- Extend Select Extend
-  - not
-  - has
-  
-- Dom Basics
-  - inner
-  - outer
-  - top
-  - bottom
-  - before
-  - after
-  - remove 
-  
-- Style Basics
-  - getStyle
-  - setStyle
+<div class="slide bg-white">
+h1. Dom Basics
 
-- CSS Basics
-  - addClass
-  - removeClass
-  - css (low level)
-  
-- XHR Basics
-  - super simple
-  - callback example
-  - POST example
-  - more complex
-  
-- Event Basics
+* inner
+* outer
+* top
+* bottom
+* before
+* after
+* remove
+</div>
+
+<div class="slide bg-white">
+h1. Style Basics
+
+* getStyle
+* setStyle
+</div>
+
+<div class="slide bg-white">
+h1. CSS Basics
+
+* addClass
+* removeClass
+* css (low level)
+</div>
+
+<div class="slide bg-white">
+h1. XHR Basics
+
+* super simple
+* callback example
+* POST example
+* more complex
+</div>
+
+<div class="slide bg-white">
+h1. Event Basics
+</div>
+
