@@ -1,0 +1,17 @@
+---
+layout: presentation
+title: OSCON
+permalink: /oscon/index.html
+---
+
+<div class="slide">
+h1. Hello World  
+</div>
+
+<div class="slide bg-green">
+h1. Hello Brazil  
+</div>
+
+<div class="slide bg-pink">
+h1. Hello Europe  
+</div>
