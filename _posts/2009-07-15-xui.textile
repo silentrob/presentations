@@ -1,0 +1,71 @@
+---
+layout: presentation
+title: XUI
+permalink: /xui/index.html
+---
+
+<div class="slide">
+h1. XUI Overview
+
+- Full Featured
+- 2K
+- Chain-able
+- jQuery like
+
+</div>
+
+<div class="slide bg-green">
+h1. Basic Selector
+
+- css3 using querySelectorAll
+</div>
+
+<div class="slide bg-pink">
+h1. Hello Europe  
+</div>
+
+
+- XUI Overview
+  - Full Featured
+  - 2K
+  - Chain-able
+  - jQuery like
+  
+- Basic Selector
+  - css3 using querySelectorAll
+  
+- Other Selectors
+  - element
+  - window
+  - array
+  - comma list
+  
+- Extend Select Extend
+  - not
+  - has
+  
+- Dom Basics
+  - inner
+  - outer
+  - top
+  - bottom
+  - before
+  - after
+  - remove 
+  
+- Style Basics
+  - getStyle
+  - setStyle
+
+- CSS Basics
+  - addClass
+  - removeClass
+  - css (low level)
+  
+- XHR Basics
+  - super simple
+  - callback example
+  - POST example
+  - more complex
+  
+- Event Basics
