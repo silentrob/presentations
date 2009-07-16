@@ -18,6 +18,11 @@ h1. XUI Overview
 h1. Basic Selector
 
 * css3 using querySelectorAll
+<pre>
+  <code>
+    This is code
+  </code>
+</pre>
 
 </div>
 
@@ -78,4 +83,18 @@ h1. XHR Basics
 <div class="slide bg-white">
 h1. Event Basics
 </div>
+
+
+Cleanup Phonegap Manifest - This is because it shows up in store, and you don't need everything
+Remove Android Debug = true in manifest
+Right Click on Src and rename com.phonegap.demo use refactor >> rename command 
+In Strings.xml change the app_name
+
+
+
+
+
+
+
+
 
