@@ -157,4 +157,11 @@ ul > li{
   font-size:2em;
 }
 
+.l{text-align:left;}
+.r{text-align:left;}
+
+h6.l{
+  margin-left:30px;
+  margin-top:20px;
+}
 

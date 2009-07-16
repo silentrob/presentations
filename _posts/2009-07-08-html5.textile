@@ -1,0 +1,115 @@
+---
+layout: presentation
+title: HTML5
+permalink: /html5/index.html
+---
+
+<div class="slide bg-pink">  
+h1{margin-top:250px}. HTML5
+</div>
+
+<div class="slide bg-white" style="overflow:hidden">
+h3{margin:200px 0px 30px}(pink). vibrate
+
+h6(code). navigator.notification.vibrate(0);
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:100px}(pink). vibration example
+
+h6(l). script
+
+{% highlight javascript %}
+  x$('a.vibrate').touchstart(function(e){ navigator.notification.vibrate(0); })
+{% endhighlight %}
+
+h6(l). body
+
+{% highlight javascript %}
+  <a href="#" class="vibrate">feels good</a>
+{% endhighlight %}
+</div>
+
+<div class="slide bg-white" style="overflow:hidden">
+h3{margin:200px 0px 30px}(pink). beep
+
+h6(code). navigator.notification.beep(2);
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:100px}(pink). beep example
+
+h6(l). script
+
+{% highlight javascript %}
+  x$('a.beep').touchstart(function(e){ navigator.notification.beep(2); })
+{% endhighlight %}
+
+h6(l). body
+
+{% highlight javascript %}
+  <a href="#" class="beep">hey listen!</a>
+{% endhighlight %}
+</div>
+
+<div class="slide bg-white" style="overflow:hidden">
+h3{margin:200px 0px 30px}(pink). telephony
+
+h6(code). tell:411
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:200px}(pink). telephony example
+
+h6(l). body
+
+{% highlight html %}
+  <a href="tel:411">Call 411</a>
+{% endhighlight %}
+</div>
+
+<div class="slide bg-white">
+h3{margin:200px 0px 30px}(pink). geolocation
+
+h6(code). navigator.geolocation.getCurrentPosition(win, fail);
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:130px; margin-bottom:30px}(pink). geolocation
+
+{% highlight javascript %}
+var getLocation = function() {
+
+  var win = function(p){
+    alert(p.coords.latitude + " " + p.coords.longitude);
+  };
+  var fail = function(){};
+  
+  navigator.geolocation.getCurrentPosition(win, fail);
+}
+{% endhighlight %}
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:200px}(pink). accelerometer
+
+h6(code). navigator.accelerometer.watchAcceleration(win, fail, opt);
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:130px; margin-bottom:30px}(pink). accelerometer
+
+{% highlight javascript %}
+function watchAccel() {
+  var win = function(a){
+    document.getElementById('x').innerHTML = a.x;
+    document.getElementById('y').innerHTML = a.y;
+    document.getElementById('z').innerHTML = a.z;
+  };
+  var fail = function(){};
+  var opt = {};
+  opt.frequency = 100;
+  timer = navigator.accelerometer.watchAcceleration(win, fail, opt);
+}
+{% endhighlight %}
+</div>
