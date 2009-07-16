@@ -59,7 +59,7 @@ h6(code). tell:411
 </div>
 
 <div class="slide bg-white">
-h3{margin-top:200px}(pink). telephony example
+h3{margin-top:160px}(pink). telephony example
 
 h6(l). body
 
