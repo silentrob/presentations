@@ -5,9 +5,9 @@ permalink: /oscon/index.html
 ---
 
 <div class="slide">
-h1(top left). Ruby Go Mobile
+h1(top left). Mobile Development
 
-h4(bottom right pink). we're those phonegap guys
+h4(bottom right pink). use the stuff you know
 
 !/img/dog-with-pipe.jpg!
 </div>
