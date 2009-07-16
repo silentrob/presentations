@@ -1,7 +1,7 @@
 ---
 layout: presentation
-title: HTML5
-permalink: /html5/index.html
+title: PhoneGap API
+permalink: /phonegap-api/index.html
 ---
 
 <div class="slide bg-pink">  
