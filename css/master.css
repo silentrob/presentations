@@ -153,9 +153,17 @@ ul{
   text-align:left;
 }
 
-pre {
 
+
+.l{text-align:left;}
+.r{text-align:left;}
+
+h6.l{
+  margin-left:30px;
+  margin-top:20px;
 }
+
+
 ul > li {
   list-style-type:none;
   font-size:2em;
