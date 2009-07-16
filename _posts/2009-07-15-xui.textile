@@ -4,43 +4,62 @@ title: XUI
 permalink: /xui/index.html
 ---
 
-<div class="slide bg-orange">
-h1. XUI Overview
+<div class="slide bg-white">
 
-* Full Featured
-* 2K
-* Chain-able
-* jQuery like
-
-</div>
-
-<div class="slide bg-green">
-h1. Basic Selector
-
-* css3 using querySelectorAll
-<pre>
-  <code>
-    This is code
-  </code>
-</pre>
-
-</div>
-
-<div class="slide bg-pink">
-h1. Other Selectors  
-
-* element
-* window
-* array
-* comma list
+h1{padding-top:200px}. XUI
 
 </div>
 
 <div class="slide bg-white">
-h1. Extend Select Extend 
+h1. Basic Selector
 
-* has
-* not
+h6(code). x$('a.foo > li');
+
+</div>
+
+<div class="slide bg-white">
+h1. Other Selectors  
+
+
+{% highlight javascript %}
+
+x$(window);                         // The Window
+x$(element);                        // An Existing Element  
+x$('ul#globalnav li a.selected');   // A CSS3 Selector
+x$(['li','div#foo']);               // An Array of Selectors
+x$('li','.selected','#some_id');    // A comma list of CSS3 Selectors
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+h1. Select Extended 
+
+h5. Given
+
+
+{% highlight html %}
+
+<ul>
+  <li class="foo">one</li>
+  <li>two</li>
+  <li class="foo baz">three</li>
+  <li>four</li>
+  <li>five</li>
+</ul>
+
+{% endhighlight %}
+
+<br />
+
+h5. Yields
+
+{% highlight javascript %}
+x = x$("ul li").not('.foo'); // returns two, four, and five
+x = x$("ul li").has('.foo'); // returns one and three
+{% endhighlight %}
+
 </div>
 
 
@@ -57,28 +76,217 @@ h1. Dom Basics
 </div>
 
 <div class="slide bg-white">
-h1. Style Basics
+h2{margin-top:40px}. Dom 1
 
-* getStyle
-* setStyle
+h4. inner / outer
+
+{% highlight html %}
+
+x$("ul li").inner('Hello World');  // replaces all items with Hello World
+x$("p").outer('<b>Hello</b>'); // replaces p with b
+
+{% endhighlight %}
+
 </div>
 
 <div class="slide bg-white">
-h1. CSS Basics
+h2{margin-top:40px}. Dom 2
 
-* addClass
-* removeClass
-* css (low level)
+h4. top / bottom
+
+{% highlight html %}
+<ul>
+  <li>one</li>
+  <li>two</li>
+</ul>
+
+x$("ul").top('zero');
+x$("ul").bottom('<li>Three</li>');
+
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<ul>
+  <li>zero</li>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>  
+</ul>
+
+{% endhighlight %}
+
 </div>
 
 <div class="slide bg-white">
-h1. XHR Basics
+h2{margin-top:40px}. Dom 3
 
-* super simple
-* callback example
-* POST example
-* more complex
+h4. before / after
+
+{% highlight html %}
+<ul>
+  <li>one</li>
+  <li>two</li>
+</ul>
+
+x$("ul").before('<h1>My List</h1>');
+x$("ul").after('<p>Thanks</p>');
+
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<h1>My List</h1>
+<ul>
+  <li>one</li>
+  <li>two</li> 
+</ul>
+<p>Thanks</p>
+
+{% endhighlight %}
+
 </div>
+
+<div class="slide bg-white">
+
+h2{margin-top:40px}. Dom 4
+
+h4. remove
+
+{% highlight html %}
+<ul>
+  <li id="one">one</li>
+  <li>two</li>
+</ul>
+
+x$("#one").remove();
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<ul>
+  <li>two</li> 
+</ul>
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h2{margin-top:40px}. Style Basics
+
+h5. getStyle / addClass / removeClass / css
+
+{% highlight html %}
+
+<p style="padding-left:20px;">Testing getStyle</p>
+
+x$("p").getStyle('padding-left');  // returns 20px
+x$("p").addClass('selected');
+x$("p").removeClass('selected');
+x$("p").css({'color':'red','height':'100px'});
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h1. XHR
+
+h5. XMLHttpRequest
+
+<pre>
+  <code>
+    x$('node').xhr(url, options);
+  </code>
+</pre>
+
+{% highlight html %}
+
+x$("#tweets").xhr('_tweets.html');
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h1. XHR 2
+
+h5. call me back!
+
+{% highlight html %}
+
+var doThis = function() {
+  console.log(this.responseText);
+}
+
+x$(window).xhr('test.html', {callback: doThis });
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+  
+h1. XHR 3
+
+h5. post
+
+{% highlight html %}
+
+var doThis = function() {
+  console.log(this.responseText);
+}
+
+x$(window).xhr('http://myserver.com/post.php', {
+    method:'post', 
+    data:'comment=win&id=12', 
+    callback: doThis 
+    });
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+  
+h1. XHR 4
+
+h5. advanced
+
+
+given JSON
+
+{% highlight html %}
+
+{'username':'silentrob','image_url':'photo.jpg'}
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+
+x$('#user').xhrjson( '/users/1.json', {
+  map:{'username':'#name', 'image_url':'img#avatar[@src]'}
+  });
+
+{% endhighlight %}
+
+</div>
+
+
 
 <div class="slide bg-white">
 h1. Event Basics

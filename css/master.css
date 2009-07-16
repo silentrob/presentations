@@ -153,6 +153,9 @@ ul{
   text-align:left;
 }
 
+pre {
+
+}
 ul > li {
   list-style-type:none;
   font-size:2em;
