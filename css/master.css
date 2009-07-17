@@ -73,6 +73,8 @@ a:hover {
 /* colors */
 
 .bg-white{background-color:#fff; color:black;}
+.bg-black{background-color:#000; color:white;}
+.white{color:white;}
 
 .black{color:#000;}
 

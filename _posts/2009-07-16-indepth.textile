@@ -7,23 +7,169 @@ permalink: /gap/index.html
 
 <div class="slide bg-white">
 
-h1{padding-top:200px}. Bridging the GAP
+h1{padding-top:170px}. Bridging the GAP
 
 </div>
 
 
 <div class="slide bg-white">
 
-h1. Bridging the GAP
+
+h2(bottom right white bg-black). so how does this really work?
+
+!/img/wiremess.jpg!
 
 </div>
 
 
-Private API
-    - iphone (gap://)
-    - android (Extended JS Object)
-    - bb (cookie backflips)
+<div class="slide bg-white">
 
-Plugin API
-    - native controls
-    - facebook connect
+h1. iPhone bridge
+
+h4(pink). gap://class.method/options
+
+
+
+h6(l). phonegap.js
+
+{% highlight javascript %}
+    PhoneGap.exec("Location.start", args);
+{% endhighlight %}
+
+h6(l). Location.h
+
+{% highlight javascript %}
+- (void)start:(NSMutableArray*)arguments
+     withDict:(NSMutableDictionary*)options;
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:20px}. iPhone bridge
+
+h5(pink). and back...
+
+
+h6(l). Location.h
+
+{% highlight javascript %}
+  NSString * jsCallBack =
+   [NSString stringWithFormat:
+   @"navigator.geolocation.setLocation({ timestamp: %d, %@ });", 
+   epoch, 
+   coords];
+  [webView stringByEvaluatingJavaScriptFromString:jsCallBack];
+{% endhighlight %}
+
+h6(l). phonegap.js
+
+{% highlight javascript %}
+Geolocation.prototype.setLocation = function(position) {
+    this.lastPosition = position;
+    for (var i = 0; i < this.callbacks.onLocationChanged.length; i++) {
+        var f = this.callbacks.onLocationChanged.shift();
+        f(position);
+    }
+};
+{% endhighlight %}
+
+</div>
+
+
+
+<div class="slide bg-white">
+
+h3{margin-top:20px}. Android 101
+
+h5(pink). No really, Line 101.
+
+h6(l). DroidGap.java
+
+{% highlight javascript %}
+gap = new PhoneGap(this, appView);
+geo = new GeoBroker(appView, this);
+accel = new AccelListener(this, appView);
+
+// This creates the new javascript interfaces for PhoneGap
+appView.addJavascriptInterface(gap, "Device");
+appView.addJavascriptInterface(geo, "Geo");
+appView.addJavascriptInterface(accel, "Accel");
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:20px}. more Droid
+
+
+h6(l). GeoListener.java
+
+{% highlight javascript %}
+  mAppView.loadUrl("
+  javascript:Geolocation.gotCurrentPosition(" + loc.getLatitude() + ", " + loc.getLongitude() + ")
+  ");
+
+{% endhighlight %}
+
+h6(l). phonegap.js
+
+{% highlight javascript %}
+Geolocation.gotCurrentPosition = function(lat, lng) {
+
+  if (lat == "undefined" || lng == "undefined") {
+    this.fail();
+  } else {
+    p = {};
+    p.latitude = lat;
+    p.longitude = lng;
+    this.global_success(p);
+  }
+}
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h1. BlackBerry
+
+!/img/cookies.jpg!
+
+</div>
+
+
+<div class="slide bg-white">
+
+h6(l pink). Browser Field 2
+
+h6(bottom right white). CSS3 / DOM2
+
+!/img/light.jpg!
+
+
+</div>
+
+<div class="slide bg-white">
+
+h1. Everyhting else...
+
+h5(pink). PalmPre / Nokia / WinMO
+
+<br /><br /><br /><br /><br /><br /><br />
+
+h3. Coming soon...
+
+</div>
+<div class="slide bg-white">
+
+h1{margin-top:200px}. Extend
+
+
+</div>
+
