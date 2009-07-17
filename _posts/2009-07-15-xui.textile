@@ -350,6 +350,50 @@ h6(l). Supported Events
 </div>
 
 
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Effects
+
+h6(l). css transformation
+
+{% highlight html %}
+
+x$('#fx').tween({
+	background:'red',
+	duration:1.5
+});
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Effects 2
+
+h6(l). css animation
+
+{% highlight html %}
+
+x$('#fx').tween({
+	by:[100,100], // X,Y
+	duration:1.5
+});
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h2{margin-top:30px}(green). Debugging
+
+* Simulator
+* Stimulator
+* WebKit Nightly + Inspector
+
+</div>
 
 <div class="slide bg-white">
 
