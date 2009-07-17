@@ -54,10 +54,6 @@ h2(top right black). multiple code bases
 h1{margin-top:250px}. HTML / CSS / JS
 </div>
 
-<div class="slide bg-green" style="overflow:hidden">  
-h4{margin-top:250px}. The Ruby Mindset
-</div>
-
 <div class="slide bg-blue">
 h3{color:yellow}(bottom right black). we have problems
 
