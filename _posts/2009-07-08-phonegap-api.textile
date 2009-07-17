@@ -5,7 +5,52 @@ permalink: /phonegap-api/index.html
 ---
 
 <div class="slide bg-pink">  
+h1{margin-top:250px}. PhoneGap API
+</div>
+
+<div class="slide bg-pink">  
+  * device
+  * vibration
+  * beep
+  * geolocation
+  * accelerometer
+  * camera
+</div>
+
+<div class="slide bg-pink">  
 h1{margin-top:250px}. HTML5
+</div>
+
+<div class="slide bg-white" style="overflow:hidden">
+h3{margin:200px 0px 30px}(pink). device
+
+h6(code). device
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:30px}(pink). device example
+
+h6(l). script
+
+{% highlight javascript %}
+  x$(window).load(function(){
+    x$("#platform").inner(device.platform);
+    x$("#version").inner(device.version);
+    x$("#name").inner(device.name);
+    x$("#uuid").inner(device.uuid);
+  });
+{% endhighlight %}
+
+h6(l). body
+
+{% highlight javascript %}
+  <ul>
+    <li id="platform"></li>
+    <li id="version"></li>
+    <li id="name"></li>
+    <li id="uuid"></li>
+  </ul>
+{% endhighlight %}
 </div>
 
 <div class="slide bg-white" style="overflow:hidden">
@@ -75,7 +120,7 @@ h6(code). navigator.geolocation.getCurrentPosition(win, fail);
 </div>
 
 <div class="slide bg-white">
-h3{margin-top:130px; margin-bottom:30px}(pink). geolocation
+h3{margin-top:130px; margin-bottom:30px}(pink). geolocation example
 
 {% highlight javascript %}
 var getLocation = function() {
@@ -97,14 +142,14 @@ h6(code). navigator.accelerometer.watchAcceleration(win, fail, opt);
 </div>
 
 <div class="slide bg-white">
-h3{margin-top:130px; margin-bottom:30px}(pink). accelerometer
+h3{margin-top:130px; margin-bottom:30px}(pink). accelerometer example
 
 {% highlight javascript %}
 function watchAccel() {
   var win = function(a){
-    document.getElementById('x').innerHTML = a.x;
-    document.getElementById('y').innerHTML = a.y;
-    document.getElementById('z').innerHTML = a.z;
+    x$('#x').innerHTML = a.x;
+    x$('#y').innerHTML = a.y;
+    x$('#z').innerHTML = a.z;
   };
   var fail = function(){};
   var opt = {};
@@ -113,3 +158,8 @@ function watchAccel() {
 }
 {% endhighlight %}
 </div>
+
+<div class="slide bg-pink">  
+h1{margin-top:250px}. Questions?
+</div>
+
