@@ -11,14 +11,16 @@ h1{padding-top:200px}. XUI
 </div>
 
 <div class="slide bg-white">
-h1. Basic Selector
+
+h3{margin-top:30px}(green). Basic Selector
 
 h6(code). x$('a.foo > li');
 
 </div>
 
 <div class="slide bg-white">
-h1. Other Selectors  
+
+h3{margin-top:30px}(green). Other Selectors  
 
 
 {% highlight javascript %}
@@ -34,10 +36,10 @@ x$('li','.selected','#some_id');    // A comma list of CSS3 Selectors
 </div>
 
 <div class="slide bg-white">
-h1. Select Extended 
 
-h5. Given
+h3{margin-top:30px}(green). Select Extended 
 
+h6(l). Given
 
 {% highlight html %}
 
@@ -53,7 +55,7 @@ h5. Given
 
 <br />
 
-h5. Yields
+h6(l). Yields
 
 {% highlight javascript %}
 x = x$("ul li").not('.foo'); // returns two, four, and five
@@ -64,7 +66,8 @@ x = x$("ul li").has('.foo'); // returns one and three
 
 
 <div class="slide bg-white">
-h1. Dom Basics
+
+h3{margin-top:30px}(green). Dom Basics
 
 * inner
 * outer
@@ -76,7 +79,8 @@ h1. Dom Basics
 </div>
 
 <div class="slide bg-white">
-h2{margin-top:40px}. Dom 1
+
+h3{margin-top:30px}(green). Dom 1
 
 h4. inner / outer
 
@@ -90,7 +94,8 @@ x$("p").outer('<b>Hello</b>'); // replaces p with b
 </div>
 
 <div class="slide bg-white">
-h2{margin-top:40px}. Dom 2
+
+h3{margin-top:30px}(green). Dom 2
 
 h4. top / bottom
 
@@ -121,7 +126,8 @@ x$("ul").bottom('<li>Three</li>');
 </div>
 
 <div class="slide bg-white">
-h2{margin-top:40px}. Dom 3
+
+h3{margin-top:30px}(green). Dom 3
 
 h4. before / after
 
@@ -153,7 +159,7 @@ x$("ul").after('<p>Thanks</p>');
 
 <div class="slide bg-white">
 
-h2{margin-top:40px}. Dom 4
+h3{margin-top:30px}(green). Dom 4
 
 h4. remove
 
@@ -181,7 +187,7 @@ x$("#one").remove();
 
 <div class="slide bg-white">
 
-h2{margin-top:40px}. Style Basics
+h3{margin-top:30px}(green). Style Basics
 
 h5. getStyle / addClass / removeClass / css
 
@@ -190,8 +196,11 @@ h5. getStyle / addClass / removeClass / css
 <p style="padding-left:20px;">Testing getStyle</p>
 
 x$("p").getStyle('padding-left');  // returns 20px
+
 x$("p").addClass('selected');
+
 x$("p").removeClass('selected');
+
 x$("p").css({'color':'red','height':'100px'});
 
 {% endhighlight %}
@@ -200,7 +209,7 @@ x$("p").css({'color':'red','height':'100px'});
 
 <div class="slide bg-white">
 
-h1. XHR
+h3{margin-top:30px}(green). XHR
 
 h5. XMLHttpRequest
 
@@ -220,7 +229,7 @@ x$("#tweets").xhr('_tweets.html');
 
 <div class="slide bg-white">
 
-h1. XHR 2
+h3{margin-top:30px}(green). XHR 2
 
 h5. call me back!
 
@@ -238,7 +247,7 @@ x$(window).xhr('test.html', {callback: doThis });
 
 <div class="slide bg-white">
   
-h1. XHR 3
+h3{margin-top:30px}(green). XHR 3
 
 h5. post
 
@@ -261,16 +270,16 @@ x$(window).xhr('http://myserver.com/post.php', {
 
 <div class="slide bg-white">
   
-h1. XHR 4
+h3{margin-top:30px}(green). XHR 4
 
 h5. advanced
 
 
-given JSON
+h6(l). json.txt results
 
 {% highlight html %}
 
-{'username':'silentrob','image_url':'photo.jpg'}
+{'username':'silentrob','age':'29'}
 
 {% endhighlight %}
 
@@ -278,9 +287,63 @@ given JSON
 
 {% highlight html %}
 
-x$('#user').xhrjson( '/users/1.json', {
-  map:{'username':'#name', 'image_url':'img#avatar[@src]'}
-  });
+x$(window).xhrjson( 'json.txt', {
+  map:{'username':'#name', 'age':'#age'}
+});
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+
+<span id="name">silentrob</span>
+<span id="age">29</span>
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Event Basics
+
+h6(l). on anything
+
+{% highlight html %}
+  x$('button').on( 'click', function(e){ alert('hey that tickles!') });
+{% endhighlight %}
+
+
+<br />
+
+h6(l). do anything
+
+{% highlight html %}
+  x$('button').click(function(e){ alert('hey that tickles!') });
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Event 2
+
+h6(l). Supported Events
+
+{% highlight html %}
+* click
+* load
+* touchstart
+* touchmove
+* touchend
+* touchcancel
+* gesturestart
+* gesturechange
+* gestureend
+* orientationchange
 
 {% endhighlight %}
 
@@ -289,8 +352,26 @@ x$('#user').xhrjson( '/users/1.json', {
 
 
 <div class="slide bg-white">
-h1. Event Basics
+
+h3{margin-top:30px}(green). Resources
+
+
+http://www.xuijs.com
+
+<br />
+
+http://phonegap-docs.smart.joyent.com/
+
+
+<br />
+
+http://developer.apple.com/safari/library/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/InteractiveVisualEffects/InteractiveVisualEffects.html
+
 </div>
+
+
+
+
 
 
 Cleanup Phonegap Manifest - This is because it shows up in store, and you don't need everything

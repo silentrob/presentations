@@ -1,0 +1,29 @@
+---
+layout: presentation
+title: Bridgeing Gap
+permalink: /gap/index.html
+---
+
+
+<div class="slide bg-white">
+
+h1{padding-top:200px}. Bridging the GAP
+
+</div>
+
+
+<div class="slide bg-white">
+
+h1. Bridging the GAP
+
+</div>
+
+
+Private API
+    - iphone (gap://)
+    - android (Extended JS Object)
+    - bb (cookie backflips)
+
+Plugin API
+    - native controls
+    - facebook connect
