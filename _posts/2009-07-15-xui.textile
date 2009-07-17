@@ -4,68 +4,386 @@ title: XUI
 permalink: /xui/index.html
 ---
 
-<div class="slide">
-h1. XUI Overview
+<div class="slide bg-white">
 
-- Full Featured
-- 2K
-- Chain-able
-- jQuery like
+h1{padding-top:200px}. XUI
 
 </div>
 
-<div class="slide bg-green">
-h1. Basic Selector
+<div class="slide bg-white">
 
-- css3 using querySelectorAll
+h3{margin-top:30px}(green). Basic Selector
+
+h6(code). x$('a.foo > li');
+
 </div>
 
-<div class="slide bg-pink">
-h1. Hello Europe  
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Other Selectors  
+
+
+{% highlight javascript %}
+
+x$(window);                         // The Window
+x$(element);                        // An Existing Element  
+x$('ul#globalnav li a.selected');   // A CSS3 Selector
+x$(['li','div#foo']);               // An Array of Selectors
+x$('li','.selected','#some_id');    // A comma list of CSS3 Selectors
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Select Extended 
+
+h6(l). Given
+
+{% highlight html %}
+
+<ul>
+  <li class="foo">one</li>
+  <li>two</li>
+  <li class="foo baz">three</li>
+  <li>four</li>
+  <li>five</li>
+</ul>
+
+{% endhighlight %}
+
+<br />
+
+h6(l). Yields
+
+{% highlight javascript %}
+x = x$("ul li").not('.foo'); // returns two, four, and five
+x = x$("ul li").has('.foo'); // returns one and three
+{% endhighlight %}
+
 </div>
 
 
-- XUI Overview
-  - Full Featured
-  - 2K
-  - Chain-able
-  - jQuery like
-  
-- Basic Selector
-  - css3 using querySelectorAll
-  
-- Other Selectors
-  - element
-  - window
-  - array
-  - comma list
-  
-- Extend Select Extend
-  - not
-  - has
-  
-- Dom Basics
-  - inner
-  - outer
-  - top
-  - bottom
-  - before
-  - after
-  - remove 
-  
-- Style Basics
-  - getStyle
-  - setStyle
+<div class="slide bg-white">
 
-- CSS Basics
-  - addClass
-  - removeClass
-  - css (low level)
+h3{margin-top:30px}(green). Dom Basics
+
+* inner
+* outer
+* top
+* bottom
+* before
+* after
+* remove
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Dom 1
+
+h4. inner / outer
+
+{% highlight html %}
+
+x$("ul li").inner('Hello World');  // replaces all items with Hello World
+x$("p").outer('<b>Hello</b>'); // replaces p with b
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Dom 2
+
+h4. top / bottom
+
+{% highlight html %}
+<ul>
+  <li>one</li>
+  <li>two</li>
+</ul>
+
+x$("ul").top('zero');
+x$("ul").bottom('<li>Three</li>');
+
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<ul>
+  <li>zero</li>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>  
+</ul>
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Dom 3
+
+h4. before / after
+
+{% highlight html %}
+<ul>
+  <li>one</li>
+  <li>two</li>
+</ul>
+
+x$("ul").before('<h1>My List</h1>');
+x$("ul").after('<p>Thanks</p>');
+
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<h1>My List</h1>
+<ul>
+  <li>one</li>
+  <li>two</li> 
+</ul>
+<p>Thanks</p>
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Dom 4
+
+h4. remove
+
+{% highlight html %}
+<ul>
+  <li id="one">one</li>
+  <li>two</li>
+</ul>
+
+x$("#one").remove();
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+<ul>
+  <li>two</li> 
+</ul>
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Style Basics
+
+h5. getStyle / addClass / removeClass / css
+
+{% highlight html %}
+
+<p style="padding-left:20px;">Testing getStyle</p>
+
+x$("p").getStyle('padding-left');  // returns 20px
+
+x$("p").addClass('selected');
+
+x$("p").removeClass('selected');
+
+x$("p").css({'color':'red','height':'100px'});
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). XHR
+
+h5. XMLHttpRequest
+
+<pre>
+  <code>
+    x$('node').xhr(url, options);
+  </code>
+</pre>
+
+{% highlight html %}
+
+x$("#tweets").xhr('_tweets.html');
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). XHR 2
+
+h5. call me back!
+
+{% highlight html %}
+
+var doThis = function() {
+  console.log(this.responseText);
+}
+
+x$(window).xhr('test.html', {callback: doThis });
+
+{% endhighlight %}
+
+</div>
+
+<div class="slide bg-white">
   
-- XHR Basics
-  - super simple
-  - callback example
-  - POST example
-  - more complex
+h3{margin-top:30px}(green). XHR 3
+
+h5. post
+
+{% highlight html %}
+
+var doThis = function() {
+  console.log(this.responseText);
+}
+
+x$(window).xhr('http://myserver.com/post.php', {
+    method:'post', 
+    data:'comment=win&id=12', 
+    callback: doThis 
+    });
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
   
-- Event Basics
+h3{margin-top:30px}(green). XHR 4
+
+h5. advanced
+
+
+h6(l). json.txt results
+
+{% highlight html %}
+
+{'username':'silentrob','age':'29'}
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+
+x$(window).xhrjson( 'json.txt', {
+  map:{'username':'#name', 'age':'#age'}
+});
+
+{% endhighlight %}
+
+<br />
+
+{% highlight html %}
+
+<span id="name">silentrob</span>
+<span id="age">29</span>
+
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Event Basics
+
+h6(l). on anything
+
+{% highlight html %}
+  x$('button').on( 'click', function(e){ alert('hey that tickles!') });
+{% endhighlight %}
+
+
+<br />
+
+h6(l). do anything
+
+{% highlight html %}
+  x$('button').click(function(e){ alert('hey that tickles!') });
+{% endhighlight %}
+
+</div>
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Event 2
+
+h6(l). Supported Events
+
+{% highlight html %}
+* click
+* load
+* touchstart
+* touchmove
+* touchend
+* touchcancel
+* gesturestart
+* gesturechange
+* gestureend
+* orientationchange
+
+{% endhighlight %}
+
+</div>
+
+
+
+<div class="slide bg-white">
+
+h3{margin-top:30px}(green). Resources
+
+
+http://www.xuijs.com
+
+<br />
+
+http://phonegap-docs.smart.joyent.com/
+
+
+<br />
+
+http://developer.apple.com/safari/library/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/InteractiveVisualEffects/InteractiveVisualEffects.html
+
+</div>
+
+
+
+
+
+
+Cleanup Phonegap Manifest - This is because it shows up in store, and you don't need everything
+Remove Android Debug = true in manifest
+Right Click on Src and rename com.phonegap.demo use refactor >> rename command 
+In Strings.xml change the app_name
+
+
+
+
+
+
+
+
+

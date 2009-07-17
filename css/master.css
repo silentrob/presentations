@@ -42,7 +42,7 @@ a:hover {
 
 .slide h1 {
 	font-size:4.5em;
-	margin:0 0 15px 0;
+	margin:40px 0 15px 0;
 }
 
 .slide h2 {
@@ -153,15 +153,19 @@ ul{
   text-align:left;
 }
 
-ul > li{
-  font-size:2em;
-}
+
 
 .l{text-align:left;}
 .r{text-align:left;}
+
 
 h6.l{
   margin-left:30px;
   margin-top:20px;
 }
 
+
+ul > li {
+  list-style-type:none;
+  font-size:2em;
+}
