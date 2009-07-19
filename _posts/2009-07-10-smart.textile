@@ -1,0 +1,65 @@
+---
+layout: presentation
+title: OSCON
+permalink: /oscon/index.html
+---
+
+<div class="slide">
+h1(top left). Smart
+
+h4(bottom right pink). Server Side JS
+
+!/img/dog-with-pipe.jpg!
+</div>
+
+<div class="slide bg-green" style="overflow:hidden">  
+h4{margin-top:250px}. _why put Javascript on the Server?_
+</div>
+
+<div class="slide bg-pink" style="overflow:hidden">  
+h4{margin-top:250px}. Joyent Smart Platform
+</div>
+
+<div class="slide bg-pink">
+
+h3{margin-top:200px}. VM
+
+h3. Git
+
+h3. Sammy
+</div>
+
+<div class="slide bg-blue">
+  
+!/img/hoverboard.gif!
+
+</div>
+
+<div class="slide bg-black" style="overflow:hidden">  
+h5{margin-top:250px;font-weight:300}. Smart.respond_to?(<span class="blue">:method_missing</span>) == <span class="blue">true</span>
+</div>
+
+<div class="slide bg-white">
+h3{margin-top:130px; margin-bottom:30px}(pink). noSuchMethod
+
+{% highlight javascript %}
+obj = {};
+
+obj.__noSuchMethod__ = function __noSuchMethod__ (id, args) {
+   alert("Did you forget this? " + id + " " + args );
+}
+
+obj.wtf('test');
+
+{% endhighlight %}
+</div>
+
+<div class="slide bg-blue">
+h3{color:yellow}(top left black). you will never party this hard
+
+!/img/party2.jpg!
+</div>
+
+<div class="slide bg-blue">
+h5{margin-top:256px;color:white}. small, fast, and FUCKING EVERYWHERE!
+</div>
