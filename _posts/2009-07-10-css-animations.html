@@ -5,140 +5,6 @@ permalink: /css-animations/index.html
 ---
 
 <style type="text/css" media="screen">
-  div.bar {
-    margin-top:80px;
-    -webkit-transform: rotate(10deg);
-  }
-  
-  div.foo {
-    opacity: 1;
-    -webkit-transition: opacity 1s linear;
-  }
-
-  div.foo:hover {
-    opacity: 0;
-  }
-  
-  .spin {
-    -webkit-animation-name: spins;
-    -webkit-animation-duration: 1.2s;
-    -webkit-animation-iteration-count: 1;
-  } 
-  
-  @-webkit-keyframes spins {
-    from { none; }
-    to { -webkit-transform: rotate(360deg); }
-  }
-</style>
-
-<script type="text/javascript">
-	function Spin() {
-		if ($('.baz').hasClass('spin') == false){
-			$('.baz').addClass('spin');
-		}else{
-			$('.spin').css('-webkit-animation-name', 'none');
-			setTimeout(function() {
-				$('.spin').css('-webkit-animation-name', 'spins');
-			}, 0);
-		}
-	};
-</script>
-
-<div class="slide bg-blue">
-h1{margin-top:200px}. CSS Animations
-</div>
-
-<div class="slide bg-white blue">
-h3. Get you Stoked  
-
-h5.  "cube":http://webkit.org/blog-files/3d-transforms/morphing-cubes.html  
-
-h5.  "snow stack":http://www.satine.org/research/webkit/snowleopard/snowstack.html  
-</div>
-
-<div class="slide bg-blue">
-h4{margin-top:180px}. transforms
-
-h4. transitions  
-
-h4. animations
-</div>
-
-<div class="slide bg-white">
-h3{margin-top:130px; margin-bottom:30px}(blue). transforms
-
-<div class="bar">
-{% highlight css %}
-div.bar {
-  -webkit-transform: rotate(10deg);
-}
-{% endhighlight %}
-</div>
-</div>
-
-<div class="slide bg-blue">
-h1{margin-top:210px}. transition
-</div>
-
-<div class="slide bg-white">
-h3{margin-top:130px; margin-bottom:30px}(blue). transition
-
-<div class="foo">
-{% highlight css %}
-div.foo {
-  opacity: 1;
-  -webkit-transition: opacity 1s linear;
-}
-
-div.foo:hover {
-  opacity: 0;
-}
-{% endhighlight %}
-</div>
-</div>
-
-<div class="slide bg-white">
-h3{margin-top:130px; margin-bottom:30px}(blue). animations
-
-<div class="baz" onclick="Spin();">
-{% highlight css %}
-.spin {
-  -webkit-animation-name: spins;
-  -webkit-animation-duration: 1.2s;
-  -webkit-animation-iteration-count: 1;
-} 
-
-@-webkit-keyframes spins {
-  from { none; }
-  to { -webkit-transform: rotate(360deg); }
-}
-{% endhighlight %}
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<style type="text/css" media="screen">
-    #shell {
-      background-color: black;
-      color: white;
-      font-family: 'Lucida Grande', Verdana, Arial;
-      font-size: 12px;
-      background-image: -webkit-gradient(radial,
-                            50% 500, 1,
-                            50% 500, 400,
-                            from(rgba(255, 255, 255, 0.3)),
-                            to(rgba(255, 255, 255, 0)));
-     background-repeat: no-repeat;
-    }
 
     #container {
       width: 100%;
@@ -368,8 +234,8 @@ h3{margin-top:130px; margin-bottom:30px}(blue). animations
       }
     </script>
     
-    
-  <div class="slide" id="shell">
+  <div class="slide bg-blue" onclick="toggleShape()">
+    <h3 class="bottom right">CSS Animations</h3>
     <div id="container">
       <div id="stage">
         <div id="shape" class="cube backfaces">
@@ -393,23 +259,101 @@ h3{margin-top:130px; margin-bottom:30px}(blue). animations
 
 
 
+<style type="text/css" media="screen">
+div.bar {
+margin-top:80px;
+-webkit-transform: rotate(10deg);
+}
 
+div.foo {
+opacity: 1;
+-webkit-transition: opacity 1s linear;
+}
+div.foo:hover {
+opacity: 0;
+}
 
+.spin {
+-webkit-animation-name: spins;
+-webkit-animation-duration: 1.2s;
+-webkit-animation-iteration-count: 1;
+}
 
+@-webkit-keyframes spins {
+from { none; }
+to { -webkit-transform: rotate(360deg); }
+}
+</style>
+<script type="text/javascript">
+	function Spin() {
+		if ($('.baz').hasClass('spin') == false){
+			$('.baz').addClass('spin');
+		}else{
+			$('.spin').css('-webkit-animation-name', 'none');
+			setTimeout(function() {
+				$('.spin').css('-webkit-animation-name', 'spins');
+			}, 0);
+		}
+	};
+</script>
 
+<div class="slide bg-blue">
+<h4 style="margin-top:180px;">transforms</h4>
+<h4>transitions</h4>
+<h4>animations</h4>
+</div>
 
+<div class="slide bg-blue">
+<h1 style="margin-top:210px;">transform</h1>
+</div>
 
+<div class="slide bg-white">
+<h3 style="margin-top:130px; margin-bottom:30px;" class="blue">transforms</h3>
+<div class="bar">
+<div class="highlight"><pre><span class="nt">div</span><span class="nc">.bar</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">10</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span>
+</pre>
+</div></div>
+</div>
 
+<div class="slide bg-blue">
+<h1 style="margin-top:210px;">transition</h1>
+</div>
 
+<div class="slide bg-white">
+<h3 style="margin-top:130px; margin-bottom:30px;" class="blue">transitions</h3>
+<div class="foo">
+<div class="highlight"><pre><span class="nt">div</span><span class="nc">.foo</span> <span class="p">{</span>
+  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">opacity</span> <span class="m">1</span><span class="err">s</span> <span class="n">linear</span><span class="p">;</span>
+<span class="p">}</span>
 
+<span class="nt">div</span><span class="nc">.foo</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+</div></div>
+</div>
 
+<div class="slide bg-blue">
+<h1 style="margin-top:210px;">animation</h1>
+</div>
 
+<div class="slide bg-white">
+<h3 style="margin-top:130px; margin-bottom:30px;" class="blue">animations</h3>
+<div class="baz" onclick="Spin();">
+<div class="highlight"><pre><span class="nc">.spin</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="n">spins</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">2</span><span class="err">s</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span> 
 
-
-
-
-
-
-
-
+<span class="k">@-webkit-keyframes</span> <span class="nt">spins</span> <span class="p">{</span>
+  <span class="nt">from</span> <span class="p">{</span> <span class="k">none</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nt">to</span> <span class="p">{</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div></div>
+</div>
 
