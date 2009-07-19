@@ -1,7 +1,7 @@
 ---
 layout: presentation
 title: OSCON
-permalink: /oscon/index.html
+permalink: /smart/index.html
 ---
 
 <div class="slide">

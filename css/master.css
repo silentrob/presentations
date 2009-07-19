@@ -150,7 +150,7 @@ table tr td {
 }
 
 
-ul{
+ul, ol{
   padding-left:100px;
   text-align:left;
 }
@@ -167,7 +167,7 @@ h6.l{
 }
 
 
-ul > li {
+ul > li, ol > li {
   list-style-type:none;
   font-size:2em;
 }
