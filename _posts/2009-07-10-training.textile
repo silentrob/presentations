@@ -1,11 +1,11 @@
 ---
 layout: presentation
-title: OSCON
-permalink: /oscon/index.html
+title: PhoneGap Training
+permalink: /training/index.html
 ---
 
 <div class="slide">
-h1(top left). OSCON
+h1(top left). PhoneGap Training
 
 h4(bottom right pink). really its mobile with web tech
 
@@ -13,7 +13,7 @@ h4(bottom right pink). really its mobile with web tech
 </div>
 
 <div class="slide">
-h4{margin-top:230px; font-size:2em}. Brock Whitten && Rob Ellis && Brian LeRoux
+h4{margin-top:230px; font-size:2em}. Brock Whitten && Rob Ellis
 
 h4(blue). Nitobi
 </div>
@@ -26,7 +26,7 @@ h4{margin-top:250px}. make today valuable
 h4{margin-top:250px}. introductions/experience/goals
 </div>
 
-<div class="slide bg-green" style="overflow:hidden">  
+<div class="slide bg-blue" style="overflow:hidden">  
 h4{margin-top:250px}. _So What's PhoneGap?_
 </div>
 
@@ -36,7 +36,7 @@ h1{margin-top:230px;}. MIT
 h5{margin-top:10px;}. free as in do what you like
 </div>
 
-<div class="slide bg-green" style="overflow:hidden">  
+<div class="slide bg-blue" style="overflow:hidden">  
 h4{margin-top:250px}. _understand the problem_
 </div>
 
@@ -67,17 +67,15 @@ h1{margin-top:250px}. HTML / CSS / JS
 </div>
 
 <div class="slide">
-h3{color:yellow}(bottom right black). we have problems
-
 !/img/party-hard.jpg!
 </div>
 
-<div class="slide bg-blue" style="overflow:hidden">  
-h4{margin-top:250px}. javascript has a big future
+<div class="slide bg-white">  
+h4(orange){margin-top:250px}. javascript has a big future
 </div>
 
-<div class="slide bg-blue">
-h5{margin-top:256px;color:white}. small, fast, and FUCKING EVERYWHERE!
+<div class="slide bg-white">
+h5(orange){margin-top:256px;}. small, fast, and FUCKING EVERYWHERE!
 </div>
 
 <div class="slide bg-orange">
@@ -125,8 +123,8 @@ h4(bottom right bg-orange). WTF is not Webkit?!?
 !/img/dog-human.jpg!  
 </div>
 
-<div class="slide bg-blue">
-h3(black){margin:60px;}. Landscape
+<div class="slide bg-white">
+h3(green){margin:60px;}. JS Landscape
 
 h3. Stuff you already use.
 
@@ -139,12 +137,12 @@ h3. Magic Framework
 h3. XUI
 </div>
 
-<div class="slide bg-blue">
-h1{margin-top:250px;color:white}. Your Favorite $()
+<div class="slide bg-white">
+h1(green){margin-top:250px;}. Your Favorite $()
 </div>
 
-<div class="slide bg-blue">
-h1{margin-top:250px;color:white}. IUI
+<div class="slide bg-white">
+h1(green){margin-top:250px;}. IUI
 </div>
 
 <div class="slide bg-green">

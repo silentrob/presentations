@@ -4,20 +4,12 @@ title: OSCON
 permalink: /smart/index.html
 ---
 
-<div class="slide">
-h1(top left). Smart
-
-h4(bottom right pink). Server Side JS
-
-!/img/dog-with-pipe.jpg!
-</div>
-
-<div class="slide bg-green" style="overflow:hidden">  
-h4{margin-top:250px}. _why put Javascript on the Server?_
-</div>
-
-<div class="slide bg-pink" style="overflow:hidden">  
+<div class="slide bg-pink">  
 h4{margin-top:250px}. Joyent Smart Platform
+</div>
+
+<div class="slide bg-pink">  
+h4{margin-top:250px}. _why put Javascript on the Server?_
 </div>
 
 <div class="slide bg-pink">
@@ -54,12 +46,16 @@ obj.wtf('test');
 {% endhighlight %}
 </div>
 
-<div class="slide bg-blue">
+<div class="slide">
 h3{color:yellow}(top left black). you will never party this hard
 
 !/img/party2.jpg!
 </div>
 
-<div class="slide bg-blue">
+<div class="slide bg-pink">
 h5{margin-top:256px;color:white}. small, fast, and FUCKING EVERYWHERE!
+</div>
+
+<div class="slide">  
+h1{margin-top:250px}. Questions?
 </div>
