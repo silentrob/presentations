@@ -1,7 +1,7 @@
 ---
 layout: presentation
 title: Bridgeing Gap
-permalink: /gap/index.html
+permalink: /indepth/index.html
 ---
 
 

@@ -5,7 +5,9 @@ permalink: /phonegap-api/index.html
 ---
 
 <div class="slide bg-pink">  
-h1{margin-top:250px}. PhoneGap API
+h1{background:black}(top left). PhoneGap API
+
+!/img/cog.jpg!
 </div>
 
 <div class="slide bg-pink">  
