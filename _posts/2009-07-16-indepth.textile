@@ -143,6 +143,61 @@ h1. BlackBerry
 
 </div>
 
+<div class="slide bg-white">
+
+h1. BlackBerry
+
+h6(l). in device.js
+
+{% highlight javascript %}
+
+exec: function(command, params, sync) {
+    if (Device.available || command == "initialize") {
+        try {
+            var url = "gap://" + command;
+            if (params) url += "/" + params.join("/");
+            document.location = url;
+        } catch(e) { ... }
+    }
+},
+
+{% endhighlight %}
+
+h6(l). out device.js
+
+{% highlight javascript %}
+
+poll: function(callback) {
+	eval(document.cookie + (callback ? ";callback();" : ""));
+},
+{% endhighlight %}
+
+
+</div>
+
+<div class="slide bg-white">
+
+h1. BlackBerry
+
+h6(l). phonegap.java
+
+
+{% highlight javascript %}
+
+public String getHTTPCookie(String url) {
+	StringBuffer responseCode = new StringBuffer();
+	synchronized (pendingResponses) {
+		for (int index = 0; index < pendingResponses.size(); index++)
+			responseCode.append(pendingResponses.elementAt(index));
+		pendingResponses.removeAllElements();
+	}
+	return responseCode.toString();
+}
+
+{% endhighlight %}
+
+</div>
+
 
 <div class="slide bg-white">
 
